@@ -1,4 +1,4 @@
-class CreateLikes < ActiveRecord::Migration[6.0]
+class CreateLikes < ActiveRecord::Migration[5.2]
   def change
     create_table :likes do |t|
       t.belongs_to :student, null: false, foreign_key: true
