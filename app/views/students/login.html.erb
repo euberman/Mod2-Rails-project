@@ -1,15 +1,15 @@
 <h1 class='title'>Welcome to Flatiron Colletion Net</h2>
 
 <div class='login-form'>
-  <%= form_tag user_path do %>
-    <label>Username:</label><br>
-    <%= text_field_tag :'student[username]' %><br>
+  <%= form_for(:student) user_path do %>
+    <%= f.label :username %><br>
+    <%= f.text_field_tag :'student[username]' %><br>
 
-    <label>Password:</label><br>
-    <%= text_area_tag :'student[password]' %><br>
+    <%= f.label :password %><br>
+    <%= f.text_area_tag :'student[password]' %><br>
 
-    <%= submit_tag "Log In" %>
-<% end %>
+    <%= f.submit "Log In" %>
+  <% end %>
 </div>
 <div class='login-buttons'>
   <%= button_to "Create new student account" %>
