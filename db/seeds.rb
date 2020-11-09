@@ -61,3 +61,5 @@ end
                 content: "#{Faker::Lorem.paragraphs}",
                 student_id: 1)
 end
+
+
