@@ -21,5 +21,4 @@ class CohortsController < ApplicationController
 
   def delete
   end
-  # dfldkdkjdlkjfl
 end
