@@ -24,7 +24,8 @@ Cohort.create(name: "Cohort 5",
               location: "#{Faker::Address.city}")
 
 
-5.times do
+
+              5.times do
     test_student = Student.create!(cohort_id: 1, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}")
     Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,

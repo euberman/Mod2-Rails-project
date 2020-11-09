@@ -1,3 +1,5 @@
-<%= @student.name %>
+<%= @student.name %> <br> <br>
 
-<%= @student.blog.all  %>
+<%  @student.blogs.each do |blog|%>
+   - <%= link_to blog.name, blog_path(blog) %> <br>
+<% end %>

@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :students 
   resources :blogs
   resources :cohorts
+  resources :videos
+  resources :likes 
 end
