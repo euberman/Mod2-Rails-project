@@ -56,9 +56,10 @@ end
 
 
 60.times do
-    Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
-                name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
-                student_id: (1...20).sample)
+    b_name = "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
+    Blog.create(date: Faker::Date.between(from: '2018-01-01', to: '2020-10-06'),
+                name: b_name,
+                content: Faker::Lorem.paragraphs,
+                student_id: [1..20].sample)
 end
 
