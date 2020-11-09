@@ -21,6 +21,10 @@ class StudentsController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+  end
+
+  def login
+    
   end
 end
