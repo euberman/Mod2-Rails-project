@@ -1,3 +1,8 @@
-<%= @blog.student.name %> <br>
+<h1> <%= @blog.name %> </h1>
+
+By <%= link_to @blog.student.name, student_path(@blog.student) %> <br> 
+<%= @blog.date %> <br> <br> <br>
+
 
 <%= @blog.content %>
+
