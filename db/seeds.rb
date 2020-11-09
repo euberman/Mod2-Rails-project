@@ -55,12 +55,10 @@ end
 end
 
 
-# 60.times do
-#     Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
-#                 name: "#{Faker::ProgrammingLanguage.name}" + ["Cheat Sheet", "Hacks", "Tips", "Guide", "For Beginners"].sample,
-#                 content: "#{Faker::Lorem.paragraphs}",
-#                 student_id: (1...20).sample)
-# end
+60.times do
+    Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+                name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
+                content: "#{Faker::Lorem.paragraphs}",
+                student_id: (1...20).sample)
+end
 
-# 20 times.do 
-#     Video.create 
