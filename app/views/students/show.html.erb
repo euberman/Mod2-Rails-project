@@ -1,5 +1,11 @@
 <%= @student.name %> <br> <br>
 
+<label> Blog posts: </label> <br>
 <%  @student.blogs.each do |blog|%>
    - <%= link_to blog.name, blog_path(blog) %> <br>
+<% end %> <br>
+
+<label> Demo videos: </label> <br>
+<%  @student.videos.each do |video|%>
+   - <%= link_to video.name, video_path(video) %> <br>
 <% end %>
