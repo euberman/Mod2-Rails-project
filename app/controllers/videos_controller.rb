@@ -5,7 +5,10 @@ class VideosController < ApplicationController
 
   def show
     @video = Video.find(params[:id])
+    result = @video.url.split('/').last
+    @video_id = "http://www.youtube.com/embed/#{result}"
   end
+
 
   def new
     @video = Video.new

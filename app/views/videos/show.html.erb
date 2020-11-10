@@ -4,6 +4,6 @@ By <%= link_to @video.student.name, student_path(@video.student) %> <br>
 <%= @video.date %> <br> <br> <br>
 
 
-<%= @video.url %> <br>
-<%= @video.description %>
+<iframe width="490" height="275" src="<%= @video_id %>" frameborder="0"></iframe> <br>
 
+<%= @video.description %>
