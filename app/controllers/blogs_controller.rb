@@ -19,6 +19,7 @@ class BlogsController < ApplicationController
   end
 
   def edit
+    @blog = Blog.find(params[:id])
   end
 
   def update
@@ -29,7 +30,7 @@ class BlogsController < ApplicationController
 
   private 
     def blog_params
-      params.require(:blog).permit(:date, :name, :content)
+      params.require(:blog).permit(:date, :name, :content, :student_id)
     end
 
 end

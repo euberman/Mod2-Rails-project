@@ -3,6 +3,9 @@
 By <%= link_to @blog.student.name, student_path(@blog.student) %> <br> 
 <%= @blog.date %> <br> <br> <br>
 
+<% @blog.likes.each do |likes|%>
+    <%= like.number %>
+    <% end %>
 
 <%= @blog.content %>
 
