@@ -23,9 +23,52 @@ Cohort.create(name: "Cohort 4",
 Cohort.create(name: "Cohort 5", 
               location: "#{Faker::Address.city}")
 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Student accounts is for demo presentation
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+demo_student_1 = Student.create!(cohort_id: 1, name: "Gabbi", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"gabbi@flatironschool.com")
+    Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+                name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
+                content: "#{Faker::Lorem.paragraphs}",
+                student_id: demo_student_1.id)
+    Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+                name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
+                content: "#{Faker::Lorem.paragraphs}",
+                student_id: demo_student_1.id)
+    Video.create(name: "HTTP Crash Course & Exploration",
+                    date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+                    url: "https://www.youtube.com/watch?v=iYM2zFP3Zn0&ab_channel=TraversyMedia",
+                    description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
+                    student_id: demo_student_1.id)
+    Video.create(name: "Parts of an HTTP Request",
+                    date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+                    url: "https://www.youtube.com/watch?v=pHFWGN-upGM&ab_channel=Udacity",
+                    description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
+                    student_id: demo_student_1.id)
+
+demo_student_2 = Student.create!(cohort_id: 1, name: "Eric", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"eric@flatironschool.com")
+    Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+                name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
+                content: "#{Faker::Lorem.paragraphs}",
+                student_id: demo_student_2.id)
+    Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+                name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
+                content: "#{Faker::Lorem.paragraphs}",
+                student_id: demo_student_2.id)
+    Video.create(name: "Strapi.js Crash Course | Headless CMS",
+                date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+                url: "https://www.youtube.com/watch?v=6FnwAbd2SDY&ab_channel=TraversyMedia",
+                description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
+                student_id: demo_student_2.id)
+    Video.create(name: "Ruby on Rails - Has Many Associations",
+                date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+                url: "https://www.youtube.com/watch?v=DAjfsW4gqGo&ab_channel=AppleJuiceTeaching",
+                description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
+                student_id: demo_student_2.id)
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 5.times do
-    test_student = Student.create!(cohort_id: 1, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}")
+    test_student = Student.create!(cohort_id: 1, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"#{Faker::Internet.email}")
     Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",
@@ -37,7 +80,7 @@ Cohort.create(name: "Cohort 5",
 end
 
 5.times do
-    test_student = Student.create!(cohort_id: 2, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}")
+    test_student = Student.create!(cohort_id: 2, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"#{Faker::Internet.email}")
     Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",
@@ -49,7 +92,7 @@ end
 end
 
 5.times do
-    test_student = Student.create!(cohort_id: 3, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}")
+    test_student = Student.create!(cohort_id: 3, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"#{Faker::Internet.email}")
     Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",
@@ -61,7 +104,7 @@ end
 end
 
 5.times do
-    test_student = Student.create!(cohort_id: 4, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}")
+    test_student = Student.create!(cohort_id: 4, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"#{Faker::Internet.email}")
     Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",
@@ -73,7 +116,7 @@ end
 end
 
 5.times do
-    test_student = Student.create!(cohort_id: 5, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}")
+    test_student = Student.create!(cohort_id: 5, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"#{Faker::Internet.email}")
     Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",

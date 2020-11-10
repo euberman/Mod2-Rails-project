@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_06_172301) do
+ActiveRecord::Schema.define(version: 2020_11_10_213839) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "date"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_11_06_172301) do
     t.text "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
     t.index ["cohort_id"], name: "index_students_on_cohort_id"
   end
 
