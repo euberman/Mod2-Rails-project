@@ -1,7 +1,7 @@
 Blog Archives 
 
 <ul> <% @blogs.each do |blog| %>
-    <li> <%= blog.date %> </li>
+    <li> <%= link_to blog.date, blog_path(blog) %> </li>
     <% end %>
 
     </ul>

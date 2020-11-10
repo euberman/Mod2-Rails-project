@@ -1,0 +1,9 @@
+<h1> <%= @video.name %> </h1>
+
+By <%= link_to @video.student.name, student_path(@video.student) %> <br> 
+<%= @video.date %> <br> <br> <br>
+
+
+<%= @video.url %> <br>
+<%= @video.description %>
+
