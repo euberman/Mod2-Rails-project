@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :videos
   resources :likes
 
-  get “/login”, to: sessions#new”
-  post “/login”, to: “sessions#create” 
+  get "/", to: "students#index"
+
+  get "/login", to: "sessions#login"
+  post "/login", to: "sessions#create"
+
 end
