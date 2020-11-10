@@ -1,7 +1,7 @@
-cohort page
+Cohorts
 
 <ul> <% @cohorts.each do |cohort| %>
-    <li> <%= cohort.location %> </li>
+    <li> <%= link_to cohort.location, cohort_path(cohort) %> </li>
     <% end %>
 
     </ul>

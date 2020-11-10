@@ -37,12 +37,12 @@ demo_student_1 = Student.create!(cohort_id: 1, name: "Gabbi", bio: "#{Faker::Lor
                 student_id: demo_student_1.id)
     Video.create(name: "HTTP Crash Course & Exploration",
                     date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
-                    url: "https://www.youtube.com/watch?v=iYM2zFP3Zn0&ab_channel=TraversyMedia",
+                    url: "https://youtu.be/iYM2zFP3Zn0",
                     description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
                     student_id: demo_student_1.id)
     Video.create(name: "Parts of an HTTP Request",
                     date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
-                    url: "https://www.youtube.com/watch?v=pHFWGN-upGM&ab_channel=Udacity",
+                    url: "https://youtu.be/pHFWGN-upGM",
                     description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
                     student_id: demo_student_1.id)
 
@@ -57,12 +57,12 @@ demo_student_2 = Student.create!(cohort_id: 1, name: "Eric", bio: "#{Faker::Lore
                 student_id: demo_student_2.id)
     Video.create(name: "Strapi.js Crash Course | Headless CMS",
                 date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
-                url: "https://www.youtube.com/watch?v=6FnwAbd2SDY&ab_channel=TraversyMedia",
+                url: "https://youtu.be/6FnwAbd2SDY",
                 description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
                 student_id: demo_student_2.id)
     Video.create(name: "Ruby on Rails - Has Many Associations",
                 date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
-                url: "https://www.youtube.com/watch?v=DAjfsW4gqGo&ab_channel=AppleJuiceTeaching",
+                url: "https://youtu.be/DAjfsW4gqGo",
                 description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
                 student_id: demo_student_2.id)
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -73,7 +73,7 @@ demo_student_2 = Student.create!(cohort_id: 1, name: "Eric", bio: "#{Faker::Lore
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",
                 student_id: test_student.id)
-    Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+    blog2 = Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",
                 student_id: test_student.id)

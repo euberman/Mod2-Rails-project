@@ -15,9 +15,12 @@ class VideosController < ApplicationController
   end
 
   def create
+    @student = Student.find(params[:id])
+    @video = Video.new(video_params)
+    @video.save 
   end
 
-  def edit
+  def edit 
   end
 
   def update
@@ -25,4 +28,9 @@ class VideosController < ApplicationController
 
   def delete
   end
+
+  private 
+  def video_params
+    params.require(:video).permit(:name, :date, :url, :description, :student_id)
+  end 
 end
