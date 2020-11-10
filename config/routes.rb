@@ -4,5 +4,11 @@ Rails.application.routes.draw do
   resources :blogs
   resources :cohorts
   resources :videos
-  resources :likes 
+  resources :likes
+
+  get "/", to: "sessions#is_student_logged_in"
+
+  get "/login", to: "sessions#login"
+  post "/login", to: "sessions#process_login"
+
 end
