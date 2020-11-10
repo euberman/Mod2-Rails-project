@@ -1,7 +1,7 @@
 <%= form_tag(login_path, :method => :post) do %>
 
   <div class="field">
-    <%= label_tag :email, "Email or Username", class: 'label' %>
+    <%= label_tag :email, "Email", class: 'label' %>
     <%= text_field_tag :email, nil, class: 'input', autofocus: true %>
   </div>
 
