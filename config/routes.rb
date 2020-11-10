@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   resources :blogs
   resources :cohorts
   resources :videos
-  resources :likes 
+  resources :likes
+
+  get “/login”, to: sessions#new”
+  post “/login”, to: “sessions#create” 
 end

@@ -23,8 +23,5 @@ class StudentsController < ApplicationController
 
   def destroy
   end
-
-  def login
-
-  end
+  
 end

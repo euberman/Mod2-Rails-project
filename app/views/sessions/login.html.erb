@@ -1,0 +1,19 @@
+<%= form_tag(login_path, :method => :post) do %>
+
+  <div class="field">
+    <%= label_tag :email, "Email or Username", class: 'label' %>
+    <%= text_field_tag :email, nil, class: 'input', autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= label_tag :password, "Password", class: 'label' %>
+    <%= password_field_tag :password, nil, class: 'input' %>
+  </div>
+
+  <%= submit_tag("Login", class: 'button is-primary') %>
+<% end %>
+
+<br />
+
+<%= link_to "Create an Account", new_user_path, class: 'button is-secondary' %>
+<%= link_to "Forgot Password" class: 'button is-secondary' %>
