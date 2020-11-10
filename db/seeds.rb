@@ -213,7 +213,7 @@ Video.create(name: "React Router Tutorial | React For Beginners",
 
 Video.create(name: "Learn Sass In 20 Minutes | Sass Crash Course",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
-            url: "https://www.youtube.com/watch?v=Zz6eOVaaelI&ab_channel=DevEd",
+            url: "https://youtu.be/Zz6eOVaaelI",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 15)
 
