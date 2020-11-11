@@ -24,4 +24,9 @@ class StudentsController < ApplicationController
   def destroy
   end
   
+  def student_profile
+    @student = Student.find(session[:student_id])
+    # render :layout => 'profile_layout'
+  end
+
 end

@@ -6,7 +6,8 @@ class SessionsController < ApplicationController
 
   def is_student_logged_in
     if logged_in?
-      redirect_to student_path(session[:student_id])
+      redirect_to profile_path
+      # redirect_to student_path(session[:student_id])
     else
       redirect_to login_path
     end
