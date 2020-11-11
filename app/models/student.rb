@@ -16,7 +16,7 @@ class Student < ApplicationRecord
     self.likes.count
   end
 
-  def cohort_city
-    self.cohort.city
+  def cohort_location
+    self.cohort.location
   end
 end
