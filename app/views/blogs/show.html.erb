@@ -5,11 +5,13 @@ By <%= link_to @blog.student.name, student_path(@blog.student) %> <br>
 
 <%= @blog.content%>
 
+<% if @blog.student.id == session[:student_id] %>
+    <%= form_tag edit_blog_path(@blog), method: :get do %>
+    <%= submit_tag "Edit" %>
+    <% end %> 
 
-<%= form_tag edit_blog_path(@blog), method: :get do %>
-<%= submit_tag "Edit" %>
-<% end %> 
+    <%= form_tag blog_path(@blog),method: :delete do %>
+    <%= submit_tag "Delete" %>
+    <% end %> 
 
-<%= form_tag blog_path(@blog),method: :delete do %>
-<%= submit_tag "Delete" %>
-<% end %> 
+<% end %>
