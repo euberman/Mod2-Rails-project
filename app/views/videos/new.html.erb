@@ -1,6 +1,6 @@
 <h1> Upload a new demo video</h1>
 <%= form_for @video do |f| %>
-    <%# f.hidden_field :student_id, :value => @student.id %>
+    <%= f.hidden_field :student_id, :value => session[:student_id] %>
     <%= f.label "Date" %>
     <%= f.date_field :date, :value => Time.now.strftime('%Y-%m-%d') %> <br> <br>
     <%= f.label "Title" %>
