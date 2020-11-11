@@ -26,7 +26,7 @@ Cohort.create(name: "Cohort 5",
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Student accounts is for demo presentation
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-demo_student_1 = Student.create!(cohort_id: 1, name: "Gabbi", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"gabbi@flatironschool.com")
+demo_student_1 = Student.create!(cohort_id: 1, name: "Gabbi Nguyen", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"gabbi@flatironschool.com")
     Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",
@@ -46,7 +46,7 @@ demo_student_1 = Student.create!(cohort_id: 1, name: "Gabbi", bio: "#{Faker::Lor
                     description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
                     student_id: demo_student_1.id)
 
-demo_student_2 = Student.create!(cohort_id: 1, name: "Eric", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"eric@flatironschool.com")
+demo_student_2 = Student.create!(cohort_id: 1, name: "Eric Uberman", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"eric@flatironschool.com")
     Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",

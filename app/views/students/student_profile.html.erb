@@ -1,0 +1,59 @@
+
+<section class="hero is-primary is-12 is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        <%= @student.name %>
+      </h1>
+      <h2 class="subtitle">
+        <%= @student.cohort_location %> Cohort
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="is-12">
+   <div class="level">
+      <div class="level-item has-text-centered">
+         <div>
+            <p class="heading">Blogs</p>
+            <p class="title"><%= @student.blog_count %></p>
+         </div>
+      </div>
+      <div class="level-item has-text-centered">
+         <div>
+            <p class="heading">Videos</p>
+            <p class="title"><%= @student.videos_count %></p>
+         </div>
+      </div>
+      <div class="level-item has-text-centered">
+         <div>
+            <p class="heading">Likes</p>
+            
+         </div>
+      </div>
+   </div>
+
+   <div class="tile is-ancestor">
+      <div class="tile is-12 is-vertical">
+         <div class="tile">
+            <h3> My Blog posts: </h3>
+         </div>
+         <div class="tile">
+            <% @student.blogs.each do |blog|%>
+                  - <%= link_to blog.name, blog_path(blog) %> <br>
+            <% end %>
+         </div>
+      </div>
+      <div class="tile is-12 is-vertical">
+         <div class="tile">
+            <h3> My Videos: </h3>
+         </div>
+         <div class="tile">
+            <% @student.videos.each do |video|%>
+                  - <%= link_to video.name, video_path(video) %> <br>
+            <% end %>
+         </div>
+      </div>
+   </div>
+</section>
