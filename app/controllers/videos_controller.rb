@@ -15,18 +15,27 @@ class VideosController < ApplicationController
   end
 
   def create
-    @student = Student.find(params[:id])
     @video = Video.new(video_params)
     @video.save 
+    redirect_to student_path(session[:student_id])
   end
 
   def edit 
+    @video = Video.find(params[:id])
+    result = @video.url.split('/').last
+    @video_id = "http://www.youtube.com/embed/#{result}"
   end
 
   def update
+    @video = Video.find(params[:id])
+    @video.update(video_params)
+    redirect_to video_path(@video)
   end
 
-  def delete
+  def destroy
+    @video = Video.find(params[:id])
+    @video.destroy
+    redirect_to student_path(session[:student_id])
   end
 
   private 

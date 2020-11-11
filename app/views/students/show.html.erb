@@ -1,5 +1,7 @@
 <div>
    <%= @student.name %> <br> <br>
+   <%= @student.bio %> <br>
+   <%= @student.cohort.name %>, <%= @student.cohort.location %> <br><br>
 
    <label> Blog posts: </label> <br>
    <% @student.blogs.each do |blog|%>
@@ -11,3 +13,7 @@
       - <%= link_to video.name, video_path(video) %> <br>
    <% end %>
 </div>
+
+<%= form_tag edit_student_path(@student),method: :get do %>
+<%= submit_tag "Edit" %>
+<% end %> 
