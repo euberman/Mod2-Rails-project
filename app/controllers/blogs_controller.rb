@@ -27,7 +27,10 @@ class BlogsController < ApplicationController
     redirect_to blog_path(@blog)
   end
 
-  def delete
+  def destroy
+    @blog = Blog.find(params[:id])
+    @blog.destroy
+    redirect_to student_path(session[:student_id])
   end
 
   private 

@@ -7,3 +7,12 @@ By <%= link_to @video.student.name, student_path(@video.student) %> <br>
 <iframe width="490" height="275" src="<%= @video_id %>" frameborder="0"></iframe> <br>
 
 <%= @video.description %>
+
+
+<%= form_tag edit_video_path(@video),method: :get do %>
+<%= submit_tag "Edit" %>
+<% end %> 
+
+<%= form_tag video_path(@video),method: :delete do %>
+<%= submit_tag "Delete" %>
+<% end %> 

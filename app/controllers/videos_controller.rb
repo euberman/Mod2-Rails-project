@@ -32,7 +32,10 @@ class VideosController < ApplicationController
     redirect_to video_path(@video)
   end
 
-  def delete
+  def destroy
+    @video = Video.find(params[:id])
+    @video.destroy
+    redirect_to student_path(session[:student_id])
   end
 
   private 
