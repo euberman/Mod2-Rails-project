@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
   def process_login
     @student = Student.find_by(email: params[:email])
     session[:student_id] = @student.id
+
     if @student
       redirect_to 'student_path(@student)'
     else
