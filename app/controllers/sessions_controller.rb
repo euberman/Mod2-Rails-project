@@ -8,15 +8,16 @@ class SessionsController < ApplicationController
     if logged_in?
       redirect_to student_path(session[:student_id])
     else
-      render :login
+      redirect_to login_path
     end
   end
 
   def process_login
     @student = Student.find_by(email: params[:email])
     session[:student_id] = @student.id
+
     if @student
-      redirect_to 'student_path(@student)'
+      redirect_to student_path(@student.id)
     else
       render :login
     end
@@ -24,6 +25,7 @@ class SessionsController < ApplicationController
   end
   
   def destroy
-    session.delete :username
+    session.delete :student_id
+    redirect_to login_path
   end 
 end

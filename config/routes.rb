@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :likes
 
   get "/", to: "sessions#is_student_logged_in"
-
+  get "/logout", to: "sessions#destroy"
   get "/login", to: "sessions#login"
   post "/login", to: "sessions#process_login"
 
