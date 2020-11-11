@@ -1,25 +1,33 @@
 <div class="column" ></div>
-<div class="column" >
+<div class="column is-three-fifths" >
   <h1>Welcome to Flatiron Blog Net</h1>
 
-  <%= form_tag(controller: 'sessions', action: 'process_login') do %>
+  <%= form_tag ({controller: 'sessions', action: 'process_login', method: 'post'}) do %>
 
     <div class="field">
-      <%= label_tag :email, "Email", class: 'label' %>
-      <%= text_field_tag :email, nil, class: 'input', autofocus: true %>
+      <div class="control">
+        <%= label_tag :email, "Email", class: 'label' %>
+        <%= text_field_tag :email, nil, class: 'input', autofocus: true %>
+      </div>
     </div>
 
     <div class="field">
-      <%= label_tag :password, "Password", class: 'label' %>
-      <%= password_field_tag :password, nil, class: 'input' %>
+      <div class="control">
+        <%= label_tag :password, "Password", class: 'label' %>
+        <%= password_field_tag :password, nil, class: 'input' %>
+      </div>
     </div>
 
-    <%= submit_tag("Login", class: 'button is-primary') %>
+    <div class="field">
+      <div class="control">
+        <%= submit_tag("Login", class: 'button is-primary') %>
+      </div>
+    </div>
   <% end %>
 
   <br />
 
   <%= link_to "Create an Account", new_student_path, class: 'button is-secondary' %>
-  # <%= link_to "Forgot Password", class: 'button is-secondary' %>
+
 </div>
 <div class="column" ></div>
