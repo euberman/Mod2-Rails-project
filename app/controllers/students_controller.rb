@@ -27,16 +27,11 @@ class StudentsController < ApplicationController
 
   def destroy
   end
-  
-  def student_profile
-    @student = Student.find(session[:student_id])
-    # render :layout => 'profile_layout'
-  end
 
-  private 
+  private
+  
   def student_params
     params.require(:student).permit(:cohort_id, :name, :bio)
   end 
-
 
 end
