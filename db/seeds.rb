@@ -27,24 +27,28 @@ Cohort.create(name: "Cohort 5",
 # Student accounts is for demo presentation
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 demo_student_1 = Student.create!(cohort_id: 1, name: "Gabbi Nguyen", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"gabbi@flatironschool.com")
-    Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+    blog1 = Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",
                 student_id: demo_student_1.id)
-    Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
+    blog2 = Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
                 content: "#{Faker::Lorem.paragraphs}",
                 student_id: demo_student_1.id)
-    Video.create(name: "HTTP Crash Course & Exploration",
+    video1 = Video.create(name: "HTTP Crash Course & Exploration",
                     date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                     url: "https://youtu.be/iYM2zFP3Zn0",
                     description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
                     student_id: demo_student_1.id)
-    Video.create(name: "Parts of an HTTP Request",
+    video2 = Video.create(name: "Parts of an HTTP Request",
                     date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
                     url: "https://youtu.be/pHFWGN-upGM",
                     description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
                     student_id: demo_student_1.id)
+    Like.create(student_id: demo_student_1.id, 
+                video_id: video1.id,
+                blog_id: blog1.id,
+                number: "#{Faker::Number.between(from: 1, to: 10)}")
 
 demo_student_2 = Student.create!(cohort_id: 1, name: "Eric Uberman", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"eric@flatironschool.com")
     Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
