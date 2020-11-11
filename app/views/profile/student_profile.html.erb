@@ -40,7 +40,7 @@
             <h3 class="title"> My Blog posts: </h3>
           </div>
           <% @student.blogs.each do |blog|%>
-            <div class="tile is-child has-background-danger">
+            <div class="tile is-child has-background-warning">
               <%= link_to blog.name, blog_path(blog) %>
             </div>
           <% end %>
