@@ -12,8 +12,8 @@
   </div>
 </section>
 
-<section class="is-12">
-   <div class="level">
+<section class="is-12 has-background-light">
+   <div class="level mb-2 p-5">
       <div class="level-item has-text-centered">
          <div>
             <p class="heading">Blogs</p>
@@ -29,31 +29,32 @@
       <div class="level-item has-text-centered">
          <div>
             <p class="heading">Likes</p>
-            
+            <p class="title">12</p>
          </div>
       </div>
    </div>
-
-   <div class="tile is-ancestor">
-      <div class="tile is-12 is-vertical">
-         <div class="tile">
-            <h3> My Blog posts: </h3>
-         </div>
-         <div class="tile">
-            <% @student.blogs.each do |blog|%>
-                  - <%= link_to blog.name, blog_path(blog) %> <br>
-            <% end %>
-         </div>
+  <div class='container mb-5'>
+    <div class="tile is-ancestor">
+      <div class="tile is-6 is-parent is-vertical">
+          <div class="tile is-child">
+            <h3 class="title"> My Blog posts: </h3>
+          </div>
+          <% @student.blogs.each do |blog|%>
+            <div class="tile is-child has-background-danger">
+              <%= link_to blog.name, blog_path(blog) %>
+            </div>
+          <% end %>
       </div>
-      <div class="tile is-12 is-vertical">
-         <div class="tile">
-            <h3> My Videos: </h3>
-         </div>
-         <div class="tile">
-            <% @student.videos.each do |video|%>
+      <div class="tile is-6 is-parent is-vertical">
+          <div class="tile is-child">
+            <h3 class="title"> My Videos: </h3>
+          </div>
+          <% @student.videos.each do |video|%>
+            <div class="tile is-child has-background-warning">
                   - <%= link_to video.name, video_path(video) %> <br>
-            <% end %>
-         </div>
+            </div>
+          <% end %>
       </div>
-   </div>
+    </div>
+  </div>
 </section>

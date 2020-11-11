@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
     session[:student_id] = @student.id
 
     if @student
-      redirect_to student_path(@student.id)
+      redirect_to profile_path
     else
       render :login
     end
