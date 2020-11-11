@@ -8,11 +8,13 @@ By <%= link_to @video.student.name, student_path(@video.student) %> <br>
 
 <%= @video.description %>
 
+<% if @video.student.id == session[:student_id] %>
+    <%= form_tag edit_video_path(@video),method: :get do %>
+    <%= submit_tag "Edit" %>
+    <% end %> 
 
-<%= form_tag edit_video_path(@video),method: :get do %>
-<%= submit_tag "Edit" %>
-<% end %> 
+    <%= form_tag video_path(@video),method: :delete do %>
+    <%= submit_tag "Delete" %>
+    <% end %> 
 
-<%= form_tag video_path(@video),method: :delete do %>
-<%= submit_tag "Delete" %>
-<% end %> 
+<% end %>
