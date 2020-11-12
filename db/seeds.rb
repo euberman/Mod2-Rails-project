@@ -29,11 +29,11 @@ Cohort.create(name: "Cohort 5",
 demo_student_1 = Student.create!(cohort_id: 1, name: "Gabbi Nguyen", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"gabbi@flatironschool.com")
     blog1 = Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2018-03-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: demo_student_1.id)
     blog2 = Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2018-03-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: demo_student_1.id)
     video1 = Video.create(name: "HTTP Crash Course & Exploration",
                     date: "#{Faker::Date.between(from: '2018-01-01', to: '2018-03-30')}",
@@ -61,11 +61,11 @@ demo_student_1 = Student.create!(cohort_id: 1, name: "Gabbi Nguyen", bio: "#{Fak
 demo_student_2 = Student.create!(cohort_id: 1, name: "Eric Uberman", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"eric@flatironschool.com")
     blog3 = Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2018-03-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: demo_student_2.id)
     blog4 = Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2018-03-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: demo_student_2.id)
     video3 = Video.create(name: "Strapi.js Crash Course | Headless CMS",
                 date: "#{Faker::Date.between(from: '2018-01-01', to: '2018-03-30')}",
@@ -96,11 +96,11 @@ demo_student_2 = Student.create!(cohort_id: 1, name: "Eric Uberman", bio: "#{Fak
     test_student = Student.create!(cohort_id: 1, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"#{Faker::Internet.email}")
     blog1 = Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2018-03-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     blog2 = Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2018-03-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     Like.create!(student_id: test_student.id, 
                 blog_id: blog1.id,
@@ -114,11 +114,11 @@ end
     test_student = Student.create!(cohort_id: 2, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"#{Faker::Internet.email}")
     blog1 = Blog.create(date: "#{Faker::Date.between(from: '2018-04-01', to: '2018-06-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     blog2 = Blog.create(date: "#{Faker::Date.between(from: '2018-04-01', to: '2018-06-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     Like.create!(student_id: test_student.id, 
                 blog_id: blog1.id,
@@ -132,11 +132,11 @@ end
     test_student = Student.create!(cohort_id: 3, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"#{Faker::Internet.email}")
     blog1 = Blog.create(date: "#{Faker::Date.between(from: '2018-07-01', to: '2018-09-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     blog2 = Blog.create(date: "#{Faker::Date.between(from: '2018-07-01', to: '2018-09-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     Like.create!(student_id: test_student.id, 
                 blog_id: blog1.id,
@@ -150,11 +150,11 @@ end
     test_student = Student.create!(cohort_id: 4, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"#{Faker::Internet.email}")
     blog1 = Blog.create(date: "#{Faker::Date.between(from: '2018-10-01', to: '2018-12-31')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     blog2 = Blog.create(date: "#{Faker::Date.between(from: '2018-10-01', to: '2018-12-31')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     Like.create!(student_id: test_student.id, 
                 blog_id: blog1.id,
@@ -168,11 +168,11 @@ end
     test_student = Student.create!(cohort_id: 5, name: "#{Faker::Name.name}", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"#{Faker::Internet.email}")
     blog1 = Blog.create(date: "#{Faker::Date.between(from: '2019-01-01', to: '2019-03-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     blog2 = Blog.create(date: "#{Faker::Date.between(from: '2019-01-01', to: '2019-03-30')}",
                 name: "#{Faker::ProgrammingLanguage.name}" + [" Cheat Sheet", " Hacks", " Tips", " Guide", " For Beginners"].sample,
-                content: "#{Faker::Lorem.paragraphs}",
+                content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     Like.create!(student_id: test_student.id, 
                 blog_id: blog1.id,
