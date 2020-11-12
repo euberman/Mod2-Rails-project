@@ -1,0 +1,23 @@
+
+<section class="hero is-primary is-12 is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        <%= @student.name %>
+      </h1>
+      <h2 class="subtitle">
+        <%= @student.cohort_location %> Cohort
+      </h2>
+      <p class="subtitle">
+        <%= form_for @student do |f| %>
+            <%= f.hidden_field :student_id, :value => session[:student_id] %>
+            <%= f.text_area :bio %> <br>
+            <%= f.submit "Update bio" %>
+        <% end %>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+

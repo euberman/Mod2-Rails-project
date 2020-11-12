@@ -1,7 +1,164 @@
-Demo Video Archives 
 
-<ul> <% @videos.each do |video| %>
-    <li> <%= link_to video.name, video_path(video) %> </li>
-    <% end %>
+<aside class="menu">
+  <p class="menu-label">
+    2019
+  </p>
+  <ul class="menu-list">
+    <li>
+      <a class="is-active">March</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2019-03" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a class="is-active">February</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2019-02" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a class="is-active">January</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2019-01" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
 
-    </ul>
+  <p class="menu-label">
+    2018
+  </p>
+    <ul class="menu-list">
+     <li>
+      <a class="is-active">December</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-12" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+     <li>
+      <a class="is-active">November</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-11" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+     <li>
+      <a class="is-active">October</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-10" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+     <li>
+      <a class="is-active">September</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-09" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+     <li>
+      <a class="is-active">August</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-08" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+     <li>
+      <a class="is-active">July</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-07" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+     <li>
+      <a class="is-active">June</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-06" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a class="is-active">May</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-05" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+        <li>
+      <a class="is-active">April</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-04" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a class="is-active">March</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-03" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a class="is-active">February</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-02" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a class="is-active">January</a>
+      <ul>
+        <% @videos.each do |videos| %>
+            <% if videos.date.include? "2018-01" %>
+                <li> <%= link_to videos.name, videos_path(videos) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+</aside>

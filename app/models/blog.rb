@@ -13,4 +13,5 @@ class Blog < ApplicationRecord
     t_diff
     # time(time_created, time_now)
   end
+
 end
