@@ -1,7 +1,7 @@
 Demo Video Archives 
 
 <ul> <% @videos.each do |video| %>
-    <li> <%= link_to video.date, video_path(video) %> </li>
+    <li> <%= link_to video.name, video_path(video) %> </li>
     <% end %>
 
     </ul>

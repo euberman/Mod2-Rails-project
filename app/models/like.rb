@@ -1,5 +1,5 @@
 class Like < ApplicationRecord
   belongs_to :student
-  belongs_to :video
-  belongs_to :blog
+  belongs_to :video, optional: true
+  belongs_to :blog, optional: true
 end
