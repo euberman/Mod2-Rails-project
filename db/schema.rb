@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 2020_11_10_213839) do
 
   create_table "likes", force: :cascade do |t|
     t.integer "student_id", null: false
-    t.integer "video_id", null: false
-    t.integer "blog_id", null: false
+    t.integer "video_id"
+    t.integer "blog_id"
     t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
