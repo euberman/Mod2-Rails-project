@@ -1,7 +1,11 @@
 class SessionsController < ApplicationController
 
   def login
-      render :layout => "landingpage"# nothing to do here!
+      render :layout => "login"# nothing to do here!
+  end
+
+  def landing_page
+    render :layout => "main"
   end
 
   def is_student_logged_in
@@ -15,9 +19,12 @@ class SessionsController < ApplicationController
 
   def process_login
     @student = Student.find_by(email: params[:email])
-    session[:student_id] = @student.id
-
+    
     if @student
+      session[:student_id] = @student.id
+      session[:student_name] = @student.name
+      session[:current_student] = @student
+      
       redirect_to profile_path
     else
       render :login
