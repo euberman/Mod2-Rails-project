@@ -1,13 +1,15 @@
 <h1> <%= @blog.name %> </h1>
 
 By <%= link_to @blog.student.name, student_path(@blog.student) %> <br> 
-<%= @blog.date %> <br> <br> <br>
+
+
+<%= @blog.date %> <br>
+👏 <% @blog.likes.each do |like| %> 
+<%= like.number %>
+<% end %> <br> <br> <br>
 
 <%= @blog.content%>
 
-<h1> Likes: <% @blog.likes.each do |like| %> 
-<%= like.number %>
-<% end %></h1>
 
 <% if @blog.student.id == session[:student_id] %>
     <%= form_tag edit_blog_path(@blog), method: :get do %>

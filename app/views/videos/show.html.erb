@@ -1,16 +1,17 @@
 <h1> <%= @video.name %> </h1>
 
 By <%= link_to @video.student.name, student_path(@video.student) %> <br> 
-<%= @video.date %> <br> <br> <br>
+<%= @video.date %> <br>
+
+👏 <% @video.likes.each do |like| %> 
+<%= like.number %>
+<% end %> <br> <br> <br>
 
 
 <iframe width="490" height="275" src="<%= @video_id %>" frameborder="0"></iframe> <br>
 
 <%= @video.description %>
 
-<h1> Likes: <% @video.likes.each do |like| %> 
-<%= like.number %>
-<% end %></h1>
 
 <% if @video.student.id == session[:student_id] %>
     <%= form_tag edit_video_path(@video),method: :get do %>
@@ -22,3 +23,4 @@ By <%= link_to @video.student.name, student_path(@video.student) %> <br>
     <% end %> 
 
 <% end %>
+
