@@ -14,4 +14,8 @@ class Blog < ApplicationRecord
     # time(time_created, time_now)
   end
 
+  def likes_count
+
+  end
+
 end

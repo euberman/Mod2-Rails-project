@@ -1,22 +1,28 @@
 class LikesController < ApplicationController
-  def index
-  end
-
-  def show
-  end
-
-  def new
-  end
+  before_action :find_owner
 
   def create
+    @owner.likes.create(student_id: session[:student_id])
+
+    if 
+    redirect_to post_path(@post)
   end
 
-  def edit
+  def create_blog_like
+
+  end
+  
+  def 
+
   end
 
-  def update
-  end
-
-  def delete
+  private
+  def find_owner
+    if params[:blog_id]
+      @owner = Blog.find(params[:blog_id])
+    else
+      @owner = Video.fing(params[:video_id])
+    end
+    @owner
   end
 end
