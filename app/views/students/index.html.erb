@@ -1,6 +1,7 @@
-Students
 <ul> <% @students.each do |student| %>
+    <% if student.cohort.name.include? "5"%>
     <li> <%= link_to student.name, student_path(student) %> </li>
     <% end %>
+    <% end%>
 
     </ul>
