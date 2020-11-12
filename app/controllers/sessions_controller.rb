@@ -5,6 +5,8 @@ class SessionsController < ApplicationController
   end
 
   def landing_page
+    @blogs = Blog.all
+    @videos = Video.all
     render :layout => "main"
   end
 
