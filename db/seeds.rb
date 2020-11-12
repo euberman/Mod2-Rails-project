@@ -47,16 +47,14 @@ demo_student_1 = Student.create!(cohort_id: 1, name: "Gabbi Nguyen", bio: "#{Fak
                     student_id: demo_student_1.id)
     Like.create!(student_id: demo_student_1.id, 
                    blog_id: blog1.id,
-                    number: "#{Faker::Number.between(from: 15, to: 50)}")
+)
     Like.create!(student_id: demo_student_1.id, 
                     blog_id: blog2.id,
-                    number: "#{Faker::Number.between(from: 15, to: 50)}")
+)
     Like.create!(student_id: demo_student_1.id, 
-                video_id: video1.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                video_id: video1.id,)
     Like.create!(student_id: demo_student_1.id, 
-                video_id: video2.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                video_id: video2.id,)
 
 demo_student_2 = Student.create!(cohort_id: 1, name: "Eric Uberman", bio: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}", email:"eric@flatironschool.com")
     blog3 = Blog.create(date: "#{Faker::Date.between(from: '2018-01-01', to: '2018-03-30')}",
@@ -78,17 +76,15 @@ demo_student_2 = Student.create!(cohort_id: 1, name: "Eric Uberman", bio: "#{Fak
                 description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
                 student_id: demo_student_2.id)
     Like.create!(student_id: demo_student_2.id, 
-                blog_id: blog3.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog3.id)
+    
     Like.create!(student_id: demo_student_2.id, 
-                blog_id: blog4.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog4.id)
+                
     Like.create!(student_id: demo_student_2.id, 
-                video_id: video3.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                video_id: video3.id)
     Like.create!(student_id: demo_student_2.id, 
-                video_id: video4.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                video_id: video4.id)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -103,11 +99,10 @@ demo_student_2 = Student.create!(cohort_id: 1, name: "Eric Uberman", bio: "#{Fak
                 content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     Like.create!(student_id: test_student.id, 
-                blog_id: blog1.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog1.id)
+
     Like.create!(student_id: test_student.id, 
-                blog_id: blog2.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog2.id)
 end
 
 5.times do
@@ -121,11 +116,9 @@ end
                 content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     Like.create!(student_id: test_student.id, 
-                blog_id: blog1.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog1.id)
     Like.create!(student_id: test_student.id, 
-                blog_id: blog2.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog2.id)
 end
 
 5.times do
@@ -139,11 +132,9 @@ end
                 content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     Like.create!(student_id: test_student.id, 
-                blog_id: blog1.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog1.id)
     Like.create!(student_id: test_student.id, 
-                blog_id: blog2.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog2.id)
 end
 
 5.times do
@@ -157,11 +148,9 @@ end
                 content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     Like.create!(student_id: test_student.id, 
-                blog_id: blog1.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog1.id,)
     Like.create!(student_id: test_student.id, 
-                blog_id: blog2.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog2.id,)
 end
 
 5.times do
@@ -175,11 +164,9 @@ end
                 content: "#{Faker::Lorem.paragraphs.join(" ")}",
                 student_id: test_student.id)
     Like.create!(student_id: test_student.id, 
-                blog_id: blog1.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog1.id,)
     Like.create!(student_id: test_student.id, 
-                blog_id: blog2.id,
-                number: "#{Faker::Number.between(from: 15, to: 50)}")
+                blog_id: blog2.id,)
 end
 
 Video.create(name: "Demo of jsTree for Ruby on Rails",
@@ -188,8 +175,7 @@ Video.create(name: "Demo of jsTree for Ruby on Rails",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 1)
 Like.create!(student_id: 1, 
-            video_id: 5,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 5)
 
 Video.create(name: "Create a C# Application from Start to Finish - Complete Course",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -197,8 +183,7 @@ Video.create(name: "Create a C# Application from Start to Finish - Complete Cour
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 2)
 Like.create!(student_id: 2, 
-            video_id:6,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id:6)
 
 Video.create(name: "6: How To Create Classes And Objects In C# | C# Tutorial For Beginners | C Sharp Tutorial",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -206,8 +191,7 @@ Video.create(name: "6: How To Create Classes And Objects In C# | C# Tutorial For
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 3)
 Like.create!(student_id: 3, 
-            video_id: 7,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 7)
 
 Video.create(name: "REST API concepts and examples",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -215,8 +199,7 @@ Video.create(name: "REST API concepts and examples",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 4)
 Like.create!(student_id: 4, 
-            video_id: 8,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 8)
 
 Video.create(name: "What is SQL? [in 4 minutes for beginners]",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -224,8 +207,7 @@ Video.create(name: "What is SQL? [in 4 minutes for beginners]",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 5)
 Like.create!(student_id: 5, 
-            video_id: 9,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 9)
 
 Video.create(name: "HTML, CSS, JavaScript Explained [in 4 minutes for beginners]",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -233,8 +215,7 @@ Video.create(name: "HTML, CSS, JavaScript Explained [in 4 minutes for beginners]
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 6)
             Like.create!(student_id: 6, 
-            video_id: 10,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 10)
 
 Video.create(name: "What are JSON Web Tokens? JWT Auth Explained [Tutorial]",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -242,8 +223,7 @@ Video.create(name: "What are JSON Web Tokens? JWT Auth Explained [Tutorial]",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 7)
             Like.create!(student_id: 7, 
-            video_id: 11,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 11)
 
 Video.create(name: "Learn JavaScript in 12 Minutes",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -251,8 +231,7 @@ Video.create(name: "Learn JavaScript in 12 Minutes",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 8)
             Like.create!(student_id: 8, 
-            video_id: 12,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 12)
 
 Video.create(name: "Generating a Hash from Two Arrays in Ruby",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -260,8 +239,7 @@ Video.create(name: "Generating a Hash from Two Arrays in Ruby",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 9)
             Like.create!(student_id: 9, 
-            video_id: 13,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 13)
 
 Video.create(name: "Difference Between React Native and Native Programming Languages",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -269,8 +247,7 @@ Video.create(name: "Difference Between React Native and Native Programming Langu
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 10)
             Like.create!(student_id: 10, 
-            video_id: 14,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 14)
 
 Video.create(name: "Ruby On Rails: Model Validations",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -278,8 +255,7 @@ Video.create(name: "Ruby On Rails: Model Validations",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 11)
             Like.create!(student_id: 11, 
-            video_id: 15,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 15)
 
 Video.create(name: "Rails Sessions, Cookies, and Auth",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -287,8 +263,7 @@ Video.create(name: "Rails Sessions, Cookies, and Auth",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 12)
             Like.create!(student_id: 12, 
-            video_id: 16,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 16)
 
 Video.create(name: "Learn CSS Grid in 20 Minutes",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -296,8 +271,7 @@ Video.create(name: "Learn CSS Grid in 20 Minutes",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 13)
             Like.create!(student_id: 13, 
-            video_id: 17,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 17)
 
 Video.create(name: "React Router Tutorial | React For Beginners",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -305,8 +279,7 @@ Video.create(name: "React Router Tutorial | React For Beginners",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 14)
             Like.create!(student_id: 14, 
-            video_id: 18,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 18)
 
 Video.create(name: "Learn Sass In 20 Minutes | Sass Crash Course",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -314,8 +287,7 @@ Video.create(name: "Learn Sass In 20 Minutes | Sass Crash Course",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 15)
             Like.create!(student_id: 15, 
-            video_id: 19,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 19)
 
 Video.create(name: "REACT: useContext Method | JavaScript Tutorial",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -323,8 +295,7 @@ Video.create(name: "REACT: useContext Method | JavaScript Tutorial",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 16)
             Like.create!(student_id: 16, 
-            video_id: 20,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 20)
 
 Video.create(name: "Strapi.js Crash Course | Headless CMS",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -332,8 +303,7 @@ Video.create(name: "Strapi.js Crash Course | Headless CMS",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 17)
             Like.create!(student_id: 17, 
-            video_id: 21,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 21)
 
 Video.create(name: "Ruby on Rails - Has Many Associations",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -341,8 +311,7 @@ Video.create(name: "Ruby on Rails - Has Many Associations",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 18)
             Like.create!(student_id: 18, 
-            video_id: 22,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 22)
 
 Video.create(name: "HTTP Crash Course & Exploration",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -350,8 +319,7 @@ Video.create(name: "HTTP Crash Course & Exploration",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 19)
             Like.create!(student_id: 19, 
-            video_id: 23,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 23)
 
 Video.create(name: "Parts of an HTTP Request",
             date: "#{Faker::Date.between(from: '2018-01-01', to: '2020-10-06')}",
@@ -359,5 +327,4 @@ Video.create(name: "Parts of an HTTP Request",
             description: "#{Faker::Lorem.paragraph_by_chars(number: 150, supplemental: false)}",
             student_id: 20)
             Like.create!(student_id: 20, 
-            video_id: 24,
-            number: "#{Faker::Number.between(from: 15, to: 50)}")
+            video_id: 24)
