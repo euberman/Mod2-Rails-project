@@ -19,8 +19,48 @@
         <div class="navbar-menu">
             <div class="navbar-start has-text-warning">
                 <a href="/students" class="navbar-item has-text-white"> Students </a>
-                <a href="/blogs" class="navbar-item has-text-white"> Blogs </a>
-                <a href="/videos" class="navbar-item has-text-white"> Videos </a>
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <p class="pt-5 pr-3 has-text-white">
+                  <span>Create</span>
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                  <a href= <%= new_blog_path %> class="dropdown-item">
+                    Submit a new blog post
+                  </a>
+                  <a href= <%= videos_path %> class="dropdown-item">
+                    Upload a new video
+                  </a>      
+                  </div>
+                </div>
+              </div>
+            </div>   
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <p class="pt-5 has-text-white">
+                  <span>Archive</span>
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                  <a href= <%= blogs_path %> class="dropdown-item">
+                    Blogs
+                  </a>
+                  <a href= <%= videos_path %> class="dropdown-item">
+                    Videos
+                  </a>      
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
             <div class="navbar-end">
                 <div class="navbar-item">
@@ -44,3 +84,5 @@
     <footer>
   </body>
 </html>
+
+
