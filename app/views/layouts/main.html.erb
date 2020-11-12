@@ -17,13 +17,15 @@
           <a href="/" class="navbar-item has-text-warning" style="font-size:36px;">Flatiron Blog Net</a>
         </div>
         <div class="navbar-menu">
+
           <div class="navbar-start has-text-warning">
               <a href="/students" class="navbar-item has-text-white"> Students </a>
               <a href="/blogs" class="navbar-item has-text-white"> Blogs </a>
               <a href="/videos" class="navbar-item has-text-white"> Videos </a>
-              <!-- -->
           </div>
-          <% if logged_in? %> <!-- wont show unless student is logged in -->  
+
+          <!-- wont show unless student is logged in -->
+          <% if logged_in? %>  
             <div class="navbar-end">
                 <div class="navbar-item">
                 <div style="margin-right:30px; color:white;">Welcome <%= session[:student_name] %></div>
@@ -33,7 +35,7 @@
                     </div>
                 </div>
             </div>
-          <% else %> 
+          <% else %>
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
@@ -42,6 +44,7 @@
                 </div>
             </div>
           <% end %>
+
         </div>
       </nav>
     </header>

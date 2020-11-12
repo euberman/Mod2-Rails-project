@@ -1,17 +1,22 @@
+
+
 <% @blogs.each do |blog| %>
     <div class="box">
       <article class="media">
+        
         <div class="media-left">
           <figure class="image is-64x64">
             <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
           </figure>
         </div>
+
         <div class="media-content">
 
           <div class="content">
             <p>
-              <strong><%= blog.student_name %></strong> <small> <%= blog.time_since %></small>
-              <br>
+              <strong><%= "#{blog.student_name}" %></strong>
+              <small><%= "#{blog.time_since}" %></small>
+              <br/>
               <%= blog.content %>
             </p>
           </div>
@@ -27,9 +32,11 @@
             </div>
           </nav>
         </div>
+
       </article>
     </div>
 <% end %>
+
 
 <% @videos.each do |video| %>
     <div class="box">
@@ -43,7 +50,7 @@
 
           <div class="content">
             <p>
-              <strong><%= video.student_name %></strong> <small><%= blog.time_since %></small>
+              <strong><%= "#{video.student_name}" %></strong>
               <br>
               <%= video.description %>
             </p>

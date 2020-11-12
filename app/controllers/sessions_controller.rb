@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def landing_page
-    @blogs = Blog.all
+    @blogs = Blog.all.order("date desc")
     @videos = Video.all
     render :layout => "main"
   end
