@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_10_213839) do
+ActiveRecord::Schema.define(version: 2020_11_12_214026) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "date"
@@ -31,9 +31,8 @@ ActiveRecord::Schema.define(version: 2020_11_10_213839) do
 
   create_table "likes", force: :cascade do |t|
     t.integer "student_id", null: false
-    t.integer "video_id"
-    t.integer "blog_id"
-    t.integer "number"
+    t.integer "video_id", null: false
+    t.integer "blog_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["blog_id"], name: "index_likes_on_blog_id"
