@@ -14,7 +14,7 @@
     <header>
       <nav class="navbar has-background-info" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <div class="navbar-item has-text-warning" style="font-size:36px;">Flatiron Blog Net</div>
+          <a href="/" class="navbar-item has-text-warning" style="font-size:36px;">Flatiron Blog Net</a>
         </div>
         <div class="navbar-menu">
             <div class="navbar-start has-text-warning">
@@ -27,7 +27,6 @@
                     <div style="margin-right:30px; color:white;">Welcome <%= @student.name %></div>
                     <div class="buttons">
                       <a href= <%= edit_student_path(@student) %> class="button is-primary">Edit Profile </a>
-                      <a href="/profile" class="button is-primary"> My Profile </a>
                       <a href="/logout" class="button is-light"> Log Out </a>
                     </div>
                 </div>
