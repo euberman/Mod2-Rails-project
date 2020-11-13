@@ -4,5 +4,4 @@ class Like < ApplicationRecord
   validates_presence_of :student, :media_id
   validates :student_id, uniqueness: { scope: [:media_id, :media_type] }
 
-
 end
