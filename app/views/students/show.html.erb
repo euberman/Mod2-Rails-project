@@ -1,15 +1,43 @@
-<div>
-   <%= @student.name %> <br> <br>
-   <%= @student.bio %> <br>
-   <%= @student.cohort.name %>, <%= @student.cohort.location %> <br><br>
+<section class="hero is-primary is-12 is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        <%= @student.name %>
+      </h1>
+      <h2 class="subtitle">
+        <%= @student.cohort_location %> Cohort
+      </h2>
+      <p class="subtitle">
+         <%= @student.bio %>
+      </p>
+    </div>
+  </div>
+</section>
 
-   <label> Blog posts: </label> <br>
-   <% @student.blogs.each do |blog|%>
-      - <%= link_to blog.name, blog_path(blog) %> <br>
-   <% end %> <br>
-
-   <label> Demo videos: </label> <br>
-   <% @student.videos.each do |video|%>
-      - <%= link_to video.name, video_path(video) %> <br>
-   <% end %>
-</div>
+<section class="is-12 has-background-light">
+<div class='container mb-5'>
+    <div class="tile is-ancestor">
+      <div class="tile is-6 is-parent is-vertical">
+          <div class="tile is-child">
+            <h3 class="title"> Blog posts: </h3>
+          </div>
+          <% @student.blogs.each do |blog|%>
+            <div class="tile is-child has-background-warning p-2">
+              <%= link_to blog.name, blog_path(blog) %> <br>
+              <%= blog.date %>
+            </div>
+          <% end %>
+      </div>
+      <div class="tile is-6 is-parent is-vertical">
+          <div class="tile is-child">
+            <h3 class="title">  Videos: </h3>
+          </div>
+          <% @student.videos.each do |video|%>
+            <div class="tile is-child has-background-warning p-2">
+                  <%= link_to video.name, video_path(video) %> <br>
+                  <%= video.date %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>

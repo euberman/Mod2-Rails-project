@@ -1,6 +1,52 @@
-Students
-<ul> <% @students.each do |student| %>
-    <li> <%= link_to student.name, student_path(student) %> </li>
-    <% end %>
-
+<aside class="menu">
+  <h3 class="menu-label is-3">
+    Chort Directory
+  </h3>
+<ul class="menu-list">
+    <li>
+        <a class="is-active"> Cohort 5</a>
+        <ul> <% @students.each do |student| %>
+            <% if student.cohort.name.include? "5"%>
+                <li> <%= link_to student.name, student_path(student) %> </li>
+            <% end %>
+        <% end%>
+        </ul>
+    </li>
+    <li>
+        <a class="is-active"> Cohort 4</a>
+        <ul> <% @students.each do |student| %>
+            <% if student.cohort.name.include? "5"%>
+                <li> <%= link_to student.name, student_path(student) %> </li>
+            <% end %>
+        <% end%>
+        </ul>
+    </li>
+    <li>
+        <a class="is-active"> Cohort 3</a>
+        <ul> <% @students.each do |student| %>
+        <% if student.cohort.name.include? "3"%>
+            <li> <%= link_to student.name, student_path(student) %> </li>
+        <% end %>
+        <% end%>
+     </ul>
+    </li>
+    <li>
+        <a class="is-active"> Cohort 2</a>
+        <ul> <% @students.each do |student| %>
+            <% if student.cohort.name.include? "2"%>
+            <li> <%= link_to student.name, student_path(student) %> </li>
+            <% end %>
+        <% end%>
+        </ul>
+    </li>
+    <li>
+        <a class="is-active"> Cohort 1</a>
+        <ul> <% @students.each do |student| %>
+            <% if student.cohort.name.include? "1"%>
+             <li> <%= link_to student.name, student_path(student) %> </li>
+            <% end %>
+        <% end%>
+        </ul>
+    </li>
     </ul>
+</aside>

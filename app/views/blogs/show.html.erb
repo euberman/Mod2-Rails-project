@@ -1,23 +1,29 @@
-<h1> <%= @blog.name %> </h1>
+<div class="tile is-ancestor">
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child box">
+      <h1 class="title">
+        <%= @blog.name %>
+      </h1>
+      <h5 class="subtitle">
+        By <%= link_to @blog.student.name, student_path(@blog.student) %> |  <%= @blog.date %> <br><br> 
+      </h5>
+    👏  <% @blog.likes.each do |like| %> 
+          <%= like.number %>
+        <% end %> <br> <br>
+ <% if @blog.student.id == session[:student_id] %>
+        <%= form_tag edit_blog_path(@blog),method: :get do %>
+        <button class="button is-small">Edit</button>
+        <% end %> 
+        <%= form_tag blog_path(@blog),method: :delete do %>
+        <button class="button is-small">Delete</button>
+        <% end %> 
 
-By <%= link_to @blog.student.name, student_path(@blog.student) %> <br> 
-
-
-<%= @blog.date %> <br>
-👏 <% @blog.likes.each do |like| %> 
-<%= like.number %>
-<% end %> <br> <br> <br>
-
-<%= @blog.content%>
-
-
-<% if @blog.student.id == session[:student_id] %>
-    <%= form_tag edit_blog_path(@blog), method: :get do %>
-    <%= submit_tag "Edit" %>
     <% end %> 
-
-    <%= form_tag blog_path(@blog),method: :delete do %>
-    <%= submit_tag "Delete" %>
-    <% end %> 
-
-<% end %>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <div class="tile is-child box">
+      <p class="title"><%= @blog.content%></p>
+    </div>
+  </div>
+</div>

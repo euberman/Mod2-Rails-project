@@ -1,26 +1,41 @@
-<h1> <%= @video.name %> </h1>
+<div class="tile is-ancestor">
+  <div class="tile is-4 is-vertical is-parent">
+    <div class="tile is-child box">
+      <h1 class="title">
+        <%= @video.name %>
+      </h1>
+      <h5 class="subtitle">
+        By <%= link_to @video.student.name, student_path(@video.student) %> |  <%= @video.date %> <br><br> 
+      </h5>
 
-By <%= link_to @video.student.name, student_path(@video.student) %> <br> 
-<%= @video.date %> <br>
+        👏 <% @video.likes.each do |like| %> 
+        <%= like.number %>
+        <% end %> <br> <br>
+    <% if @video.student.id == session[:student_id] %>
+        <%= form_tag edit_video_path(@video),method: :get do %>
+        <button class="button is-small">Edit</button>
+        <% end %> 
+        <%= form_tag video_path(@video),method: :delete do %>
+        <button class="button is-small">Delete</button>
+        <% end %> 
 
-👏 <% @video.likes.each do |like| %> 
-<%= like.number %>
-<% end %> <br> <br> <br>
+    <% end %>
+    </div>
+    </div>
+     <div class="tile is-parent">
+    <div class="tile is-child box">
+    <iframe width="490" height="275" src="<%= @video_id %>" frameborder="0"></iframe> <br>
+      <p class="title"></p>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <div class="tile is-child box">
+      <%= @video.description%>
+    </div>
+  </div>
+</div>
 
 
-<iframe width="490" height="275" src="<%= @video_id %>" frameborder="0"></iframe> <br>
-
-<%= @video.description %>
 
 
-<% if @video.student.id == session[:student_id] %>
-    <%= form_tag edit_video_path(@video),method: :get do %>
-    <%= submit_tag "Edit" %>
-    <% end %> 
-
-    <%= form_tag video_path(@video),method: :delete do %>
-    <%= submit_tag "Delete" %>
-    <% end %> 
-
-<% end %>
 

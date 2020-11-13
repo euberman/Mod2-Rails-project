@@ -17,7 +17,7 @@ class VideosController < ApplicationController
   def create
     @video = Video.new(video_params)
     @video.save 
-    redirect_to student_path(session[:student_id])
+    redirect_to video_path(@video)
   end
 
   def edit 
@@ -35,7 +35,7 @@ class VideosController < ApplicationController
   def destroy
     @video = Video.find(params[:id])
     @video.destroy
-    redirect_to student_path(session[:student_id])
+    redirect_to profile_path(session[:student_id])
   end
 
   private 
