@@ -1,5 +1,9 @@
 class LikesController < ApplicationController
 
+  def new 
+    @like = Like.new
+  end
+
   def create
     # prevent from liking for other users
     params[:like][:student_id] = current_student.id

@@ -1,0 +1,17 @@
+<%= form_for @likes do |f| %>
+    <%= f.hidden_field :student_id, :value => session[:student_id] %>
+    <%= f.hidden_field :media_id, :value =>  %>
+    <%= f.hidden_field :media_type, :value => %>
+
+
+    <label class="label"> Date </label> 
+    <%= f.date_field :date, :value => Time.now.strftime('%Y-%m-%d') %> <br> <br>
+    <label class="label"> Title </label> 
+      <div class="control">
+        <input class="input" type="text"  name="blog[name]"> <br> <br>
+    </div>
+    <textarea class="textarea" placeholder="Write your content here" rows="10" input type="text" name="blog[content]" id="blog[content]"></textarea> <br> 
+    <input class="button is-small" type="submit" value="Publish">
+<% end %>
+
+
