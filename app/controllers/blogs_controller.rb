@@ -19,6 +19,7 @@ class BlogsController < ApplicationController
 
   def edit
     @blog = Blog.find(params[:id])
+    @old_content = @blog.content
   end
 
   def update

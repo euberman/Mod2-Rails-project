@@ -1,7 +1,9 @@
     <%= form_for @blog do |f| %>
         <%= f.hidden_field :student_id, :value => session[:student_id] %>
-        <%= f.label "Title" %> <br>
-        <%= f.text_field :name %> <br>
-        <%= f.text_area :content %> <br>
-        <%= f.submit "Update blog post" %>
+    <label class="label"> Title </label> 
+          <div class="control">
+        <input class="input" type="text" placeholder=<%= @blog.name %> name="blog[name]"> <br> <br>
+    </div>
+    <textarea class="textarea"  rows="10" input type="text" placeholder=<%= @blog.content %> name="blog[content]" id="blog[content]"></textarea> <br> 
+    <input class="button is-small" type="submit" value="Update">
 <% end %>

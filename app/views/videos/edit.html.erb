@@ -1,7 +1,16 @@
 <iframe width="490" height="275" src="<%= @video_id %>" frameborder="0"></iframe> <br> <br>
 <%= form_for @video do |f| %>
         <%= f.hidden_field :student_id, :value => session[:student_id] %>
-        <%= f.text_field :name %> <br> <br>
-        <%= f.text_area :description %> <br>
-        <%= f.submit "Update video info" %>
+    <label class="label"> Title </label> 
+          <div class="control">
+        <input class="input" type="text" placeholder=<%= @video.name %> name="video[name]"> <br> <br>
+    </div>
+    <label class="label"> Youtube URL </label> 
+          <div class="control">
+        <input class="input" type="text" placeholder=<%= @video.url %> name="video[url]"> <br> <br>
+    <label class="label"> Description </label> 
+          <div class="control">
+        <input class="input" type="text" placeholder=<%= @video.description %> name="video[description]"> <br> <br>
+    </div>
+    <input class="button is-small" type="submit" value="Update">
 <% end %>
