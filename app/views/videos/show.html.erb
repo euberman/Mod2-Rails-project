@@ -8,9 +8,8 @@
         By <%= link_to @video.student.name, student_path(@video.student) %> |  <%= @video.date %> <br><br> 
       </h5>
 
-        👏 <% @video.likes.each do |like| %> 
-        <%= like.number %>
-        <% end %> <br> <br>
+    👏  <%= @video.likes.count %> <%= (@video.likes.count) == 1 ? 'Like' : 'Likes'%> <br> <br>
+
     <% if @video.student.id == session[:student_id] %>
         <%= form_tag edit_video_path(@video),method: :get do %>
         <button class="button is-small">Edit</button>
