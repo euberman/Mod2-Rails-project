@@ -1,28 +1,24 @@
 class LikesController < ApplicationController
-  before_action :find_owner
 
   def create
-    @owner.likes.create(student_id: session[:student_id])
-
-    if 
-    redirect_to post_path(@post)
+    # prevent from liking for other users
+    params[:like][:student_id] = current_student.id
+    @like = Like.new(like_params)
+    if @like.save
+      flash[:success] = 'Thanks for liking!'
+    else
+      flash[:alert] = @like.errors.full_messages.join(', ')
+    end
   end
 
-  def create_blog_like
-
-  end
-  
-  def 
-
+  def destroy
+    @like = current_student.likes.find(params[:id])
+    @like.destroy
   end
 
   private
-  def find_owner
-    if params[:blog_id]
-      @owner = Blog.find(params[:blog_id])
-    else
-      @owner = Video.fing(params[:video_id])
-    end
-    @owner
+  
+  def like_params
+    params.require(:like).permit(:student_id, :media_id, :media_type)
   end
 end

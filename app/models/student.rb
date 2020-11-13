@@ -13,8 +13,7 @@ class Student < ApplicationRecord
   end
 
   def likes_count
-    map = self.likes.map {|like| like.number}
-    map.inject(:+)
+    self.likes.count
   end
 
   def cohort_location
