@@ -38,6 +38,12 @@ class VideosController < ApplicationController
     redirect_to profile_path(session[:student_id])
   end
 
+  def like
+    @video= Video.find(params[:id])
+    Like.create(student_id: session[:student_id], media_id: @video.id, media_type: "Video")
+    redirect_to video_path(@video)
+  end
+
   private 
   def video_params
     params.require(:video).permit(:name, :date, :url, :description, :student_id)
