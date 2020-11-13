@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :videos
   resources :likes
 
-  get "/", to: "sessions#landing_page"
+  get "/", to: "sessions#is_student_logged_in?"
 
   get "/profile", to: "profile#student_profile"
   
