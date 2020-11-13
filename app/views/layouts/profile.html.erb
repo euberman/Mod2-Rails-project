@@ -31,9 +31,9 @@
                 <div class="dropdown-content">
                   <div class="dropdown-item">
                   <a href= <%= new_blog_path %> class="dropdown-item">
-                    Submit a new blog post
+                    Publish a new blog post
                   </a>
-                  <a href= <%= videos_path %> class="dropdown-item">
+                  <a href= <%= new_video_path %> class="dropdown-item">
                     Upload a new video
                   </a>      
                   </div>
@@ -66,7 +66,25 @@
                 <div class="navbar-item">
                     <div style="margin-right:30px; color:white;">Welcome <%= @student.name %></div>
                     <div class="buttons">
+
+                    <div class="modal">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        Edit
+                      </div>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+
+
+                    
                       <a href= <%= edit_student_path(@student) %> class="button is-primary">Edit Profile </a>
+                      
+                      
+                      
+                      
+                      
+                      
+                      
                       <a href="/logout" class="button is-light"> Log Out </a>
                     </div>
                 </div>

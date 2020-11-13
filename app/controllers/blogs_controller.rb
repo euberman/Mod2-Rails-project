@@ -14,11 +14,12 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     @blog.save
-    redirect_to student_path(session[:student_id])
+    redirect_to blog_path(@blog)
   end
 
   def edit
     @blog = Blog.find(params[:id])
+    @old_content = @blog.content
   end
 
   def update
@@ -30,7 +31,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog = Blog.find(params[:id])
     @blog.destroy
-    redirect_to student_path(session[:student_id])
+    redirect_to profile_path(session[:student_id])
   end
 
   private 

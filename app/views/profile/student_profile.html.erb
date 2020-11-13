@@ -40,21 +40,23 @@
     <div class="tile is-ancestor">
       <div class="tile is-6 is-parent is-vertical">
           <div class="tile is-child">
-            <h3 class="title"> My Blog posts: </h3>
+            <h3 class="title"> My blog posts: </h3>
           </div>
           <% @student.blogs.each do |blog|%>
             <div class="tile is-child has-background-warning p-2">
-              <%= link_to blog.name, blog_path(blog) %> - <%= blog.date %>
+              <%= link_to blog.name, blog_path(blog) %> <br>
+              <%= blog.date %>
             </div>
           <% end %>
       </div>
       <div class="tile is-6 is-parent is-vertical">
           <div class="tile is-child">
-            <h3 class="title"> My Videos: </h3>
+            <h3 class="title"> My videos: </h3>
           </div>
           <% @student.videos.each do |video|%>
             <div class="tile is-child has-background-warning p-2">
-                  - <%= link_to video.name, video_path(video) %> <br>
+                  <%= link_to video.name, video_path(video) %> <br>
+                  <%= video.date %>
             </div>
           <% end %>
       </div>
