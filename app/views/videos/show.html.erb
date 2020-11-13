@@ -12,11 +12,11 @@
         <%= like.number %>
         <% end %> <br> <br>
     <% if @video.student.id == session[:student_id] %>
-         <%= form_tag blog_path(@blog),method: :delete do %>
-        <button class="button is-small is-pulled-left">Delete</button>
+        <%= form_tag edit_video_path(@video),method: :get do %>
+        <button class="button is-small">Edit</button>
         <% end %> 
-        <%= form_tag edit_blog_path(@blog),method: :get do %>
-        <button class="button is-small is-pulled-right">Edit</button>
+        <%= form_tag video_path(@video),method: :delete do %>
+        <button class="button is-small">Delete</button>
         <% end %> 
 
     <% end %>
