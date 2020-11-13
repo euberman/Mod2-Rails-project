@@ -1,60 +1,28 @@
 
 <aside class="menu">
-  <h3 class="menu-label is-3">
-    2019
-  </h3>
-  <ul class="menu-list">
-    <li>
-      <a class="is-active">March</a>
-      <ul>
-        <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2019-03" %>
-                <li> <%= link_to blog.name, blog_path(blog) %> </li>
-            <% end %>
-        <% end %>
-      </ul>
-    </li>
-    <li>
-      <a class="is-active">February</a>
-      <ul>
-        <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2019-02" %>
-                <li> <%= link_to blog.name, blog_path(blog) %> </li>
-            <% end %>
-        <% end %>
-      </ul>
-    </li>
-    <li>
-      <a class="is-active">January</a>
-      <ul>
-        <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2019-01" %>
-                <li> <%= link_to blog.name, blog_path(blog) %> </li>
-            <% end %>
-        <% end %>
-      </ul>
-    </li>
-  </ul>
-
-  <h3 class="menu-label is-3">
-    2018
+<h3 class="menu-label is-3">
+    2020
   </h3>
     <ul class="menu-list">
+    <% @blogs.each do |blog| %>
+            <% if blog.date.include? "2020-12" %>
      <li>
       <a class="is-active">December</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-12" %>
+            <% if blog.date.include? "2020-12" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
       </ul>
     </li>
+        <% end %>
+        <% end %>
      <li>
       <a class="is-active">November</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-11" %>
+            <% if blog.date.include? "2020-11" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
@@ -64,7 +32,7 @@
       <a class="is-active">October</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-10" %>
+            <% if blog.date.include? "2020-10" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
@@ -74,7 +42,7 @@
       <a class="is-active">September</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-09" %>
+            <% if blog.date.include? "2020-09" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
@@ -84,7 +52,7 @@
       <a class="is-active">August</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-08" %>
+            <% if blog.date.include? "2020-08" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
@@ -94,7 +62,7 @@
       <a class="is-active">July</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-07" %>
+            <% if blog.date.include? "2020-07" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
@@ -104,7 +72,7 @@
       <a class="is-active">June</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-06" %>
+            <% if blog.date.include? "2020-06" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
@@ -114,7 +82,7 @@
       <a class="is-active">May</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-05" %>
+            <% if blog.date.include? "2020-05" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
@@ -124,7 +92,7 @@
       <a class="is-active">April</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-04" %>
+            <% if blog.date.include? "2020-04" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
@@ -134,7 +102,7 @@
       <a class="is-active">March</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-03" %>
+            <% if blog.date.include? "2020-03" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
@@ -144,7 +112,7 @@
       <a class="is-active">February</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-02" %>
+            <% if blog.date.include? "2020-02" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
@@ -154,7 +122,43 @@
       <a class="is-active">January</a>
       <ul>
         <% @blogs.each do |blog| %>
-            <% if blog.date.include? "2018-01" %>
+            <% if blog.date.include? "2020-01" %>
+                <li> <%= link_to blog.name, blog_path(blog) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+
+  <h3 class="menu-label is-3">
+    2019
+  </h3>
+  <ul class="menu-list">
+    <li>
+      <a class="is-active">December</a>
+      <ul>
+        <% @blogs.each do |blog| %>
+            <% if blog.date.include? "2019-12" %>
+                <li> <%= link_to blog.name, blog_path(blog) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a class="is-active">November</a>
+      <ul>
+        <% @blogs.each do |blog| %>
+            <% if blog.date.include? "2019-11" %>
+                <li> <%= link_to blog.name, blog_path(blog) %> </li>
+            <% end %>
+        <% end %>
+      </ul>
+    </li>
+    <li>
+      <a class="is-active">October</a>
+      <ul>
+        <% @blogs.each do |blog| %>
+            <% if blog.date.include? "2019-10" %>
                 <li> <%= link_to blog.name, blog_path(blog) %> </li>
             <% end %>
         <% end %>
