@@ -9,13 +9,12 @@
       </h5>
     👏  <%= @blog.likes.count %> <%= (@blog.likes.count) == 1 ? 'Like' : 'Likes'%> <br> <br>
  <% if @blog.student.id == session[:student_id] %>
+         <%= form_tag blog_path(@blog),method: :delete do %>
+        <button class="button is-small is-pulled-left">Delete</button>
+        <% end %> 
         <%= form_tag edit_blog_path(@blog),method: :get do %>
-        <button class="button is-small">Edit</button>
+        <button class="button is-small is-pulled-right">Edit</button>
         <% end %> 
-        <%= form_tag blog_path(@blog),method: :delete do %>
-        <button class="button is-small">Delete</button>
-        <% end %> 
-
     <% end %> 
     </div>
   </div>
