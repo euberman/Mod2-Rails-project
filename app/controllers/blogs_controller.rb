@@ -34,6 +34,12 @@ class BlogsController < ApplicationController
     redirect_to profile_path(session[:student_id])
   end
 
+  def like
+    @blog = Blog.find(params[:id])
+    Like.create(student_id: session[:student_id], media_id: @blog.id, media_type: "Blog")
+    redirect_to blog_path(@blog)
+  end
+
   private 
     def blog_params
       params.require(:blog).permit(:date, :name, :content, :student_id)

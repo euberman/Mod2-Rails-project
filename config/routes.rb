@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get "/logout", to: "sessions#destroy"
   get "/login", to: "sessions#login"
   post "/login", to: "sessions#process_login"
+  post "/blogs/:id/like", to: "blogs#like", as: 'like_blog'
 
 end
