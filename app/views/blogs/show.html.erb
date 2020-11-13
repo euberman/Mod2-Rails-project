@@ -7,9 +7,7 @@
       <h5 class="subtitle">
         By <%= link_to @blog.student.name, student_path(@blog.student) %> |  <%= @blog.date %> <br><br> 
       </h5>
-    👏  <% @blog.likes.each do |like| %> 
-          <%= like.number %>
-        <% end %> <br> <br>
+    👏  <%= @blog.likes.count %> <%= (@blog.likes.count) == 1 ? 'Like' : 'Likes'%> <br> <br>
  <% if @blog.student.id == session[:student_id] %>
         <%= form_tag edit_blog_path(@blog),method: :get do %>
         <button class="button is-small">Edit</button>

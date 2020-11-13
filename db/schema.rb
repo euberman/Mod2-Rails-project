@@ -31,14 +31,11 @@ ActiveRecord::Schema.define(version: 2020_11_10_213839) do
 
   create_table "likes", force: :cascade do |t|
     t.integer "student_id", null: false
-    t.integer "video_id"
-    t.integer "blog_id"
-    t.integer "number"
+    t.integer "media_id"
+    t.string "media_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["blog_id"], name: "index_likes_on_blog_id"
     t.index ["student_id"], name: "index_likes_on_student_id"
-    t.index ["video_id"], name: "index_likes_on_video_id"
   end
 
   create_table "students", force: :cascade do |t|
