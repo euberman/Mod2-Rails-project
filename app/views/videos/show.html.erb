@@ -10,7 +10,7 @@
 
         <%= form_tag like_video_path(@video),method: :post do %>
         <button class="button pt-5">👏 <%= @video.likes.count %> <%= (@video.likes.count) == 1 ? 'Like' : 'Likes'%> <br> <br>
-</button>        <% end %> 
+</button>        <% end %> <br><br><br>
 
  <% if @video.student.id == session[:student_id] %>
          <%= form_tag video_path(@video),method: :delete do %>

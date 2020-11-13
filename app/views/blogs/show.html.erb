@@ -10,7 +10,7 @@
         <%= form_tag like_blog_path(@blog),method: :post do %>
         <button class="button pt-5">👏 <%= @blog.likes.count %> <%= (@blog.likes.count) == 1 ? 'Like' : 'Likes'%> <br> <br>
 </button>
-        <% end %> 
+        <% end %> <br><br><br>
     
  <% if @blog.student.id == session[:student_id] %>
          <%= form_tag blog_path(@blog),method: :delete do %>
