@@ -44,7 +44,6 @@ class Blog < ApplicationRecord
     t_created = Time.new(Blog.first.date).to_i
     t_diff = (time_now - time_created) / 86400
     t_diff
-    # time(time_created, time_now)
   end
 
 end
