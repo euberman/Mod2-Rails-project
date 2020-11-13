@@ -30,7 +30,7 @@ class Video < ApplicationRecord
   end
 
   # Needs work <------------
-  def blogs_from_current_student_cohort
+  def videos_from_current_student_cohort
     current_student ? current_student : Student.find(session[:student_id])
     result = self.all.select do |b|
       self.student_cohort_id == current_student.cohort_id
