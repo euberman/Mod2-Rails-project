@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#login"
   post "/login", to: "sessions#process_login"
   post "/blogs/:id/like", to: "blogs#like", as: 'like_blog'
+  post "/videos/:id/like", to: "videos#like", as: 'like_video'
 
 end

@@ -8,17 +8,19 @@
         By <%= link_to @video.student.name, student_path(@video.student) %> |  <%= @video.date %> <br><br> 
       </h5>
 
-    👏  <%= @video.likes.count %> <%= (@video.likes.count) == 1 ? 'Like' : 'Likes'%> <br> <br>
+        <%= form_tag like_video_path(@video),method: :post do %>
+        <button class="button is-small is-pulled-left">👏</button>
+        <% end %> 
+    <%= @video.likes.count %> <%= (@video.likes.count) == 1 ? 'Like' : 'Likes'%> <br> <br>
 
-    <% if @video.student.id == session[:student_id] %>
+ <% if @video.student.id == session[:student_id] %>
+         <%= form_tag video_path(@video),method: :delete do %>
+        <button class="button is-small is-pulled-left">Delete</button>
+        <% end %> 
         <%= form_tag edit_video_path(@video),method: :get do %>
-        <button class="button is-small">Edit</button>
+        <button class="button is-small is-pulled-right">Edit</button>
         <% end %> 
-        <%= form_tag video_path(@video),method: :delete do %>
-        <button class="button is-small">Delete</button>
-        <% end %> 
-
-    <% end %>
+    <% end %> 
     </div>
     </div>
      <div class="tile is-parent">
