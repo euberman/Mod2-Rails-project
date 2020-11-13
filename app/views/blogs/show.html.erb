@@ -8,10 +8,10 @@
         By <%= link_to @blog.student.name, student_path(@blog.student) %> |  <%= @blog.date %> <br><br> 
       </h5>
         <%= form_tag like_blog_path(@blog),method: :post do %>
-        <button class="button is-small is-pulled-left">👏</button>
+        <button class="button pt-5">👏 <%= @blog.likes.count %> <%= (@blog.likes.count) == 1 ? 'Like' : 'Likes'%> <br> <br>
+</button>
         <% end %> 
     
-    <%= @blog.likes.count %> <%= (@blog.likes.count) == 1 ? 'Like' : 'Likes'%> <br> <br>
  <% if @blog.student.id == session[:student_id] %>
          <%= form_tag blog_path(@blog),method: :delete do %>
         <button class="button is-small is-pulled-left">Delete</button>
